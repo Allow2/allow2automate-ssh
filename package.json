@@ -1,11 +1,14 @@
 {
-  "name": "ssh",
+  "name": "allow2-ssh",
   "version": "1.0.0",
   "description": "Enable Allow2Automate the ability to use ssh to configure devices",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords" : [
+    'allow2automate', 'allow2', 'ssh'
+  ],
   "author": "",
   "license": "ISC"
 }
