@@ -1,14 +1,22 @@
 {
-  "name": "allow2-ssh",
+  "name": "ssh",
   "version": "1.0.0",
   "description": "Enable Allow2Automate the ability to use ssh to configure devices",
-  "main": "index.js",
+  "main": "./lib/ssh",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  repository: {
+    type: "git",
+    url: "https://github.com/Allow2/allow2automate-ssh"
+  },
+  allow2Token:"fkdMSjd6LPhWfrHR",
+  engines: {
+    "allow2automate": "*"
+  },
   "keywords" : [
-    'allow2automate', 'allow2', 'ssh'
+    "allow2automate", "allow2", "ssh"
   ],
-  "author": "",
+  "author": "Allow2",
   "license": "ISC"
 }
