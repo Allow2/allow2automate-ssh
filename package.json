@@ -1,6 +1,6 @@
 {
   "name": "allow2automate-ssh",
-  "version": "10.0.1",
+  "version": "0.0.1",
   "description": "Enable Allow2Automate the ability to use ssh to configure devices",
   "main": "./index.js",
   "scripts": {
