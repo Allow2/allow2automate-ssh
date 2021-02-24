@@ -14,11 +14,13 @@
 //
 
 'use strict';
+const TabContent = require('./Components/TabContent.js');
 
-module.exports = function(context, callback) {
+module.exports = function(context) {
 
     var ssh = {
-        allow2: context.allow2
+        test: '2',
+        TabContent: TabContent
     };
 
     ssh.blocked = function(user, callback) {
@@ -29,5 +31,5 @@ module.exports = function(context, callback) {
         callback(null);
     };
 
-    return callback(null, ssh);
+    return ssh;
 };
