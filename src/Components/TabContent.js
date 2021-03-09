@@ -12,24 +12,36 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-
 'use strict';
-const TabContent = require('./Components/TabContent.js');
 
-module.exports = function(context) {
+import React, { Component } from 'react';
 
-    var ssh = {
-        test: '2',
-        TabContent: TabContent
-    };
+class TabContent extends Component {
 
-    ssh.blocked = function(user, callback) {
+    // handleChange = (event) => {
+    //     this.setState({
+    //         pluginName: event.target.value
+    //     });
+    // };
 
-    };
+    constructor(...args) {
+        super(...args);
 
-    ssh.teardown = function(callback) {
-        callback(null);
-    };
+        // this.state = {
+        // };
+    }
 
-    return ssh;
-};
+
+    render() {
+        return (
+            <div>
+                'ssh plugin!'
+            </div>
+        );
+    }
+}
+
+export default TabContent;
+
+
+
