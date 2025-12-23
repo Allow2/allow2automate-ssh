@@ -1,5 +1,5 @@
 {
-  "name": "allow2automate-ssh",
+  "name": "@allow2/allow2automate-ssh",
   "shortName": "ssh",
   "version": "0.0.2",
   "description": "Enable Allow2Automate the ability to use ssh to configure devices",
@@ -18,14 +18,77 @@
     "type": "git",
     "url": "https://github.com/Allow2/allow2automate-ssh"
   },
+  "bugs": {
+    "url": "https://github.com/Allow2/allow2automate-ssh/issues"
+  },
+  "homepage": "https://github.com/Allow2/allow2automate-ssh#readme",
   "allow2Token": "jdZL0mcSF8qq6kpr",
   "keywords": [
     "allow2automate",
     "allow2",
-    "ssh"
+    "ssh",
+    "plugin",
+    "connectivity",
+    "parental-controls",
+    "network"
   ],
-  "author": "Allow2",
-  "license": "Apache-2.0",
+  "author": {
+    "name": "Allow2",
+    "url": "https://allow2.com"
+  },
+  "license": "MIT",
+  "allow2automate": {
+    "plugin": true,
+    "pluginId": "allow2automate-ssh",
+    "displayName": "SSH Remote Control",
+    "category": "Connectivity",
+    "permissions": [
+      "network",
+      "configuration"
+    ],
+    "minAppVersion": "2.0.0",
+    "api": {
+      "actions": [
+        {
+          "id": "connect",
+          "name": "Connect SSH",
+          "description": "Connect to remote device via SSH"
+        },
+        {
+          "id": "executeRemote",
+          "name": "Execute Remote Command",
+          "description": "Execute command on remote device"
+        },
+        {
+          "id": "enableAccess",
+          "name": "Enable Access",
+          "description": "Enable access on remote device"
+        },
+        {
+          "id": "disableAccess",
+          "name": "Disable Access",
+          "description": "Disable access on remote device"
+        }
+      ],
+      "triggers": [
+        {
+          "id": "connectionEstablished",
+          "name": "Connection Established",
+          "description": "Triggered when SSH connection is established"
+        },
+        {
+          "id": "connectionFailed",
+          "name": "Connection Failed",
+          "description": "Triggered when SSH connection fails"
+        },
+        {
+          "id": "commandExecuted",
+          "name": "Command Executed",
+          "description": "Triggered when remote command is executed"
+        }
+      ]
+    }
+  },
   "dependencies": {
     "@babel/runtime": "^7.13.9",
     "simple-ssh": "^1.0.0"
